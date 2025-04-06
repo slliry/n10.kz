@@ -15,56 +15,56 @@
 }
 
 .item_first {
-  background-image: url('/project/pics//about/10.JPG');
+  background-image: url('./pics/about/10.JPG');
   background-repeat: no-repeat;
   background-size: cover;
   filter: brightness(90%); /* Уменьшает яркость изображения */
 }
 
 .item_second {
-  background-image: url('/project/pics//about/10-2.JPG');
+  background-image: url('./pics/about/10-2.JPG');
   background-repeat: no-repeat;
   background-size: cover;
   filter: brightness(90%); /* Уменьшает яркость изображения */
 }
 
 .item_third {
-  background-image: url('/project/pics//about/materials.JPG');
+  background-image: url('./pics/about/materials.JPG');
   background-repeat: no-repeat;
   background-size: cover;
   filter: brightness(90%); /* Уменьшает яркость изображения */
 }
 
 .item_fourth {
-  background-image: url('/project/pics//about/lotok.JPG');
+  background-image: url('./pics/about/lotok.JPG');
   background-repeat: no-repeat;
   background-size: cover;
   filter: brightness(90%); /* Уменьшает яркость изображения */
 }
 
 .item_five {
-  background-image: url('/project/pics//about/load.JPG');
+  background-image: url('./pics/about/load.JPG');
   background-repeat: no-repeat;
   background-size: cover;
   filter: brightness(90%); /* Уменьшает яркость изображения */
 }
 
 .item_six {
-  background-image: url('/project/pics//about/lotki2.JPG');
+  background-image: url('./pics/about/lotki2.JPG');
   background-repeat: no-repeat;
   background-size: cover;
   filter: brightness(90%); /* Уменьшает яркость изображения */
 }
 
 .item_seven {
-  background-image: url('/project/pics//about/stock.JPG');
+  background-image: url('./pics/about/stock.JPG');
   background-repeat: no-repeat;
   background-size: cover;
   filter: brightness(90%); /* Уменьшает яркость изображения */
 }
 
 .item_eight {
-  background-image: url('/project/pics//about/baza.JPG');
+  background-image: url('./pics/about/baza.JPG');
   background-repeat: no-repeat;
   background-size: cover;
   filter: brightness(90%); /* Уменьшает яркость изображения */
