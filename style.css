@@ -134,19 +134,36 @@
     font-family: var(--primary-font-family);
     font-size: 24px;
     font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
 
   .footer-copyright {
     font-size: 14px;
     opacity: 0.8;
+    font-family: var(--secondary-font-family);
+    font-weight: 300;
+    letter-spacing: 0.3px;
   }
 
   .footer-contacts {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 8px;
     text-align: right;
     font-size: 14px;
+    font-family: var(--secondary-font-family);
+    font-weight: 400;
+    letter-spacing: 0.3px;
+  }
+
+  .footer-contacts p {
+    transition: color 0.3s ease;
+  }
+
+  .footer-contacts p:hover {
+    color: var(--brand);
+    cursor: pointer;
   }
 
   /* Медиа-запросы для мобильных устройств */
