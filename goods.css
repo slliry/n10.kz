@@ -145,7 +145,7 @@
   }
 
   .goods-card-left {
-    height: 180px;
+    height: 160px;
   }
 }
 
@@ -175,6 +175,10 @@
   }
 
   .goods-card-left {
-    height: 200px;
+    height: 160px;
+  }
+  
+  .img {
+    object-fit: contain;
   }
 }
