@@ -101,6 +101,15 @@
     }
   }
  
+  /* Белый разделитель для соединения волны с белым фоном */
+  .white-spacer {
+    height: 1px;
+    background-color: white;
+    position: relative;
+    z-index: 0;
+    margin-top: -1px;
+  }
+
   /* Стили для футера */
   .footer {
     background-color: var(--dark-background);

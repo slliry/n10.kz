@@ -4,6 +4,8 @@
   color: var(--default-color);
   font-family: var(--default-font-family);
   padding-bottom: -100px;
+  background-color: white;
+  z-index: 0;
 }
 
 .about-container {
@@ -11,9 +13,8 @@
   width: 100%;
   margin-left: 70px;
   margin-right: 70px;
-  margin-top: 100px;
+  margin-top: 60px; /* Уменьшаем отступ сверху */
   margin-bottom: 50px;
-
 }
 
 .about-heading {
@@ -237,6 +238,7 @@
 @media (max-width: 768px) {
   .about-container {
     margin: 20px 20px;
+    margin-top: 40px; /* Отступ сверху для планшетов */
   }
 
   .about-heading-left-title {
@@ -266,6 +268,7 @@
 @media (max-width: 480px) {
   .about-container {
     margin: 15px 15px;
+    margin-top: 30px; /* Отступ сверху для мобильных */
   }
 
   .about-heading-left-title {
