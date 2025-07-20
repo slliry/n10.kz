@@ -69,4 +69,35 @@
     font-family: var(--primary-font-family);
     padding-top: 4px;
   }
+
+  /* Медиа-запросы для мобильных устройств */
+  @media (max-width: 768px) {
+    :root {
+      --container: 0px 20px;
+      --container2: 40px 20px;
+    }
+    
+    .section-title {
+      padding-bottom: 30px;
+    }
+    
+    .section-title p {
+      font-size: 22px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    :root {
+      --container: 0px 15px;
+      --container2: 30px 15px;
+    }
+    
+    .section-title {
+      padding-bottom: 20px;
+    }
+    
+    .section-title p {
+      font-size: 20px;
+    }
+  }
  

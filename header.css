@@ -75,3 +75,29 @@
   }
 }
 
+/* Медиа-запросы для планшетов */
+@media (max-width: 768px) {
+  .header {
+    height: 8vh;
+  }
+
+  .header-logo {
+    font-size: 26px;
+  }
+}
+
+/* Медиа-запросы для мобильных устройств */
+@media (max-width: 480px) {
+  .header {
+    height: 7vh;
+  }
+
+  .header-container {
+    margin: 0px 15px;
+  }
+
+  .header-logo {
+    font-size: 22px;
+  }
+}
+

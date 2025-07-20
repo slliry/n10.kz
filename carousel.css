@@ -281,3 +281,64 @@
     width: 15%;
   }
 }
+
+/* Медиа-запросы для планшетов */
+@media (max-width: 768px) {
+  .carousel {
+    height: 70vh;
+  }
+
+  .carousel-item {
+    padding-top: 280px;
+  }
+
+  .carousel-item-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .carousel-item-description {
+    max-width: 85%;
+    font-size: 14px;
+  }
+
+  .carousel-prev-button,
+  .carousel-next-button {
+    width: 10%;
+    top: 25%;
+  }
+}
+
+/* Медиа-запросы для мобильных устройств */
+@media (max-width: 480px) {
+  .carousel {
+    height: 60vh;
+  }
+
+  .carousel-item {
+    padding-top: 220px;
+  }
+
+  .carousel-item-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .carousel-item-description {
+    max-width: 90%;
+    font-size: 13px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+  }
+
+  .carousel-prev-button,
+  .carousel-next-button {
+    width: 12%;
+    top: 20%;
+  }
+
+  .hero-waves {
+    height: 40px;
+    bottom: -40px;
+  }
+}
