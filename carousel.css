@@ -12,68 +12,66 @@
   position: relative;
   height: 120%;
   width: 100%;
-  /* margin: var(--container); */
 }
 
 .item_first {
   background-image: url('./pics/about/10.JPG');
   background-repeat: no-repeat;
   background-size: cover;
-  filter: brightness(90%); /* Уменьшает яркость изображения */
+  filter: brightness(80%); /* Уменьшаем яркость изображения для лучшей читаемости текста */
 }
 
 .item_second {
   background-image: url('./pics/about/10-2.JPG');
   background-repeat: no-repeat;
   background-size: cover;
-  filter: brightness(90%); /* Уменьшает яркость изображения */
+  filter: brightness(80%); /* Уменьшаем яркость изображения */
 }
 
 .item_third {
   background-image: url('./pics/about/materials.JPG');
   background-repeat: no-repeat;
   background-size: cover;
-  filter: brightness(90%); /* Уменьшает яркость изображения */
+  filter: brightness(80%); /* Уменьшаем яркость изображения */
 }
 
 .item_fourth {
   background-image: url('./pics/about/lotok.JPG');
   background-repeat: no-repeat;
   background-size: cover;
-  filter: brightness(90%); /* Уменьшает яркость изображения */
+  filter: brightness(80%); /* Уменьшаем яркость изображения */
 }
 
 .item_five {
   background-image: url('./pics/about/load.JPG');
   background-repeat: no-repeat;
   background-size: cover;
-  filter: brightness(90%); /* Уменьшает яркость изображения */
+  filter: brightness(80%); /* Уменьшаем яркость изображения */
 }
 
 .item_six {
   background-image: url('./pics/about/lotki2.JPG');
   background-repeat: no-repeat;
   background-size: cover;
-  filter: brightness(90%); /* Уменьшает яркость изображения */
+  filter: brightness(80%); /* Уменьшаем яркость изображения */
 }
 
 .item_seven {
   background-image: url('./pics/about/stock.JPG');
   background-repeat: no-repeat;
   background-size: cover;
-  filter: brightness(90%); /* Уменьшает яркость изображения */
+  filter: brightness(80%); /* Уменьшаем яркость изображения */
 }
 
 .item_eight {
   background-image: url('./pics/about/baza.JPG');
   background-repeat: no-repeat;
   background-size: cover;
-  filter: brightness(90%); /* Уменьшает яркость изображения */
+  filter: brightness(80%); /* Уменьшаем яркость изображения */
 }
 
 .carousel-item {
   position: absolute;
-  /* padding: 40px 60px; */
   height: 100%;
   width: 100%;
   display: flex;
@@ -83,14 +81,18 @@
   text-align: center;
   opacity: 0;
   padding-top: 390px;
+  transition: opacity 0.8s ease;
+  visibility: hidden;
 }
 
 .carousel-item.active {
   opacity: 1;
+  visibility: visible;
 }
 
-.carousel-item-first {
-  background-image: url('/pics');
+.carousel-item.prev {
+  transform: translateX(-100%);
+  opacity: 0;
 }
 
 .carousel-item-title {
@@ -98,8 +100,9 @@
   font-size: 48px;
   font-weight: 700;
   font-family: var(--primary-font-family);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
-/* Отсюда */
+
 .carousel-item.animate .carousel-item-title {
   animation: fadeIn 1s ease-out;
 }
@@ -143,6 +146,15 @@
   margin: 0 auto 30px auto;
   font-family: var(--default-font-family);
   line-height: 24px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+.carousel-item.active .carousel-item-description {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .carousel-item-button {
@@ -169,34 +181,66 @@
 }
 
 .carousel-prev-button {
-  width: 6%;
+  width: 40px;
+  height: 40px;
   position: absolute;
-  top: 30%;
-  left: 0;
+  top: 40%;
+  left: 20px;
   cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 5;
+  padding: 0;
 }
 
 .carousel-next-button {
-  width: 6%;
+  width: 40px;
+  height: 40px;
   position: absolute;
-  top: 30%;
-  right: 0;
+  top: 40%;
+  right: 20px;
   cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 5;
+  padding: 0;
+}
+
+.carousel-prev-button svg,
+.carousel-next-button svg {
+  width: 24px;
+  height: 24px;
 }
 
 .carousel-button-path {
-  stroke: #9a9ba1;
+  stroke: white;
+  stroke-width: 2.5;
   stroke-linecap: round;
   stroke-linejoin: round;
   transition: stroke 0.3s ease;
 }
 
-.carousel-prev-button:hover .carousel-button-path {
-  stroke: white;
+.carousel-prev-button:hover, 
+.carousel-next-button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  transform: scale(1.1);
 }
 
-.carousel-next-button:hover .carousel-button-path {
-  stroke: white;
+.carousel-prev-button:active, 
+.carousel-next-button:active {
+  transform: scale(0.95);
 }
 
 .hero-waves {
@@ -258,6 +302,15 @@
   }
 }
 
+/* Добавляем возможность свайпа для мобильных устройств */
+.carousel-touch-area {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  touch-action: pan-y;
+}
+
 @media (max-width: 1200px) {
   .carousel {
     height: 100vh;
@@ -276,12 +329,16 @@
     font-size: 28px;
   }
 
-  .carousel-prev-button {
-    width: 15%;
+  .carousel-prev-button,
+  .carousel-next-button {
+    width: 35px;
+    height: 35px;
   }
 
-  .carousel-next-button {
-    width: 15%;
+  .carousel-prev-button svg,
+  .carousel-next-button svg {
+    width: 20px;
+    height: 20px;
   }
 }
 
@@ -294,22 +351,37 @@
 
   .carousel-item {
     padding-top: 280px;
+    overflow-y: auto; /* Добавляем вертикальный скролл */
+    -webkit-overflow-scrolling: touch; /* Для плавного скролла на iOS */
   }
 
   .carousel-item-title {
     font-size: 24px;
     margin-bottom: 20px;
+    padding: 0 15px;
   }
 
   .carousel-item-description {
     max-width: 85%;
     font-size: 14px;
+    padding: 12px;
   }
 
   .carousel-prev-button,
   .carousel-next-button {
-    width: 10%;
-    top: 25%;
+    width: 32px;
+    height: 32px;
+    top: 35%;
+  }
+  
+  .carousel-prev-button svg,
+  .carousel-next-button svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .carousel-button-path {
+    stroke-width: 2.5;
   }
 }
 
@@ -321,12 +393,15 @@
   }
 
   .carousel-item {
-    padding-top: 220px;
+    padding-top: 180px;
+    overflow-y: auto; /* Добавляем вертикальный скролл */
+    -webkit-overflow-scrolling: touch; /* Для плавного скролла на iOS */
   }
 
   .carousel-item-title {
     font-size: 20px;
     margin-bottom: 15px;
+    padding: 0 10px;
   }
 
   .carousel-item-description {
@@ -334,12 +409,24 @@
     font-size: 13px;
     line-height: 1.4;
     margin-bottom: 15px;
+    padding: 10px;
   }
 
   .carousel-prev-button,
   .carousel-next-button {
-    width: 12%;
-    top: 20%;
+    width: 30px;
+    height: 30px;
+    top: 30%;
+  }
+  
+  .carousel-prev-button svg,
+  .carousel-next-button svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .carousel-button-path {
+    stroke-width: 2;
   }
 
   .hero-waves {

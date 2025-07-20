@@ -123,20 +123,16 @@
         </div>
 
         <div class="item_six carousel-item">
-          <h1 class="carousel-item-title">
-            <!-- Отгрузка -->
-          </h1>
+          <h1 class="carousel-item-title">Производство</h1>
           <p class="carousel-item-description">
-            <!-- Удобная логистика и просторная территория отгрузки товара. -->
+            Современные технологии и оборудование для производства высококачественной продукции.
           </p>
         </div>
       
         <div class="item_seven carousel-item">
-          <h1 class="carousel-item-title">
-            <!-- Отгрузка -->
-          </h1>
+          <h1 class="carousel-item-title">Склад</h1>
           <p class="carousel-item-description">
-            <!-- Удобная логистика и просторная территория отгрузки товара. -->
+            Большие складские помещения позволяют хранить продукцию в оптимальных условиях.
           </p>
         </div>
 
@@ -150,15 +146,17 @@
         </div>
         
 
-        <svg id="prevBtn" class="carousel-prev-button" viewBox="0 0 24 24" fill="none"
-          xmlns="http://www.w3.org/2000/svg">
-          <path d="M15 6L9 12L15 18" class="carousel-button-path" />
-        </svg>
+        <button id="prevBtn" class="carousel-prev-button" aria-label="Предыдущий слайд">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 6L9 12L15 18" class="carousel-button-path" />
+          </svg>
+        </button>
 
-        <svg id="nextBtn" class="carousel-next-button" viewBox="0 0 24 24" fill="none"
-          xmlns="http://www.w3.org/2000/svg">
-          <path d="M9 6L15 12L9 18" class="carousel-button-path" />
-        </svg>
+        <button id="nextBtn" class="carousel-next-button" aria-label="Следующий слайд">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 6L15 12L9 18" class="carousel-button-path" />
+          </svg>
+        </button>
       </div>
       <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
         viewBox="0 24 150 28 " preserveAspectRatio="none">
@@ -257,6 +255,7 @@
  
  
   <div class="goods-card">
+    <div class="goods-card-badge">Популярный</div>
     <div class="goods-card-left">
       <img src="pics/goods/18.jpg" class="img"/>
     </div>
@@ -281,6 +280,7 @@
   </div>
  
   <div class="goods-card">
+    <div class="goods-card-badge">Хит продаж</div>
     <div class="goods-card-left">
       <img src="pics/goods/8.jpg" class="img"/>
     </div>
@@ -305,6 +305,7 @@
   </div>
 
   <div class="goods-card">
+    <div class="goods-card-badge">Популярный</div>
     <div class="goods-card-left">
       <img src="pics/goods/l3.jpg" class="img"/>
     </div>
@@ -432,12 +433,18 @@
       <div class="footer-logo">N10-KZ</div>
       <p class="footer-copyright">© 2025 ТОО "N10-KZ". Все права защищены.</p>
     </div>
+    <div class="footer-contacts">
+      <p>+7(775) 902 81-33</p>
+      <p>n10kazakhstan@gmail.com</p>
+      <p>Туркестанская область, Сайрамский район</p>
+    </div>
   </div>
 </footer>
 
 <script src="./carousel.js"></script>
 <script src="./header.js"></script>
 <script src="./call.js"></script>
+<script src="./animations.js"></script>
 <script src="./catalogue.js"></script>
 </body>
 

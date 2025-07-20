@@ -1,79 +1,151 @@
 .goods {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 30px;
+  gap: 30px;
+  padding: 0 50px 50px;
   min-height: 100vh;
+  background-color: var(--light-bg);
 }
-
 
 .goods-card {
   display: flex;
-  padding: 4px;
-  border-radius: 12px;
-  border: 2px solid #5361bd;
-  box-shadow: 3 10px 14px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  padding: 0;
+  border-radius: var(--radius-lg);
+  border: none;
   background-color: #fff;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавный эффект при наведении */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  height: 100%;
 }
 
 .goods-card:hover {
-  transform: scale(1.05); /* Немного увеличивает карточку при наведении */
-  box-shadow: 0 12px 18px rgba(0, 0, 0, 0.2); /* Увеличенная тень при наведении */
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+}
+
+.goods-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.goods-card:hover::before {
+  opacity: 1;
 }
 
 .goods-card-left {
-  width: 50%
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
 }
 
 .goods-card-right {
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
   justify-content: center;
-  gap: 15px;  
+  gap: 15px;
+  padding: 20px;
+  background-color: white;
+  text-align: center;
+  flex-grow: 1;
 }
 
 .title_goods {
   font-weight: 700;
-  font-size: 28px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color: #5361bd;
+  font-size: 24px;
+  font-family: var(--primary-font-family);
+  color: var(--dark-background);
+  margin-bottom: 5px;
+  position: relative;
+  display: inline-block;
+}
+
+.title_goods::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  background-color: var(--brand);
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.goods-card:hover .title_goods::after {
+  width: 80px;
 }
 
 .p_goods {
-  font-weight: 540;
-  font-size: 13px;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  
+  font-weight: 400;
+  font-size: 14px;
+  font-family: var(--secondary-font-family);
+  color: var(--text-color);
+  line-height: 1.6;
 }
 
 .img {
-  width: 200px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.goods-card:hover .img {
+  transform: scale(1.1);
+}
+
+.goods-card-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: var(--dark-background);
+  color: white;
+  padding: 5px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: 600;
+  z-index: 2;
+  opacity: 1; /* Делаем бейджи видимыми по умолчанию */
+  transform: translateY(0);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.goods-card:hover .goods-card-badge {
+  background-color: var(--accent);
 }
 
 /* Медиа-запросы для планшетов */
 @media (max-width: 768px) {
   .goods {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 15px;
-    padding-left: 20px;
-    padding-right: 20px;
+    gap: 20px;
+    padding: 0 20px 30px;
   }
 
   .title_goods {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .p_goods {
-    font-size: 12px;
+    font-size: 13px;
   }
 
-  .img {
-    width: 150px;
+  .goods-card-left {
+    height: 180px;
   }
 }
 
@@ -81,32 +153,28 @@
 @media (max-width: 480px) {
   .goods {
     grid-template-columns: 1fr;
-    gap: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
+    gap: 20px;
+    padding: 0 15px 30px;
   }
 
   .goods-card {
     flex-direction: column;
-    align-items: center;
   }
 
   .goods-card-left,
   .goods-card-right {
     width: 100%;
-    text-align: center;
   }
 
   .goods-card-right {
-    align-items: center;
-    padding: 10px;
+    padding: 15px;
   }
 
   .title_goods {
-    font-size: 20px;
+    font-size: 18px;
   }
 
-  .img {
-    width: 180px;
+  .goods-card-left {
+    height: 200px;
   }
 }
