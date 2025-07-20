@@ -78,31 +78,7 @@ document.addEventListener("DOMContentLoaded", function() {
       el.style.transitionDelay = `${0.3 + index * 0.1}s`;
     });
 
-    // Футер и его элементы
-    const footer = document.querySelector('.footer');
-    if (footer) {
-      footer.classList.add('fade-in');
-      
-      // Анимация для элементов внутри футера
-      const footerLogo = document.querySelector('.footer-logo');
-      const footerCopyright = document.querySelector('.footer-copyright');
-      const footerContacts = document.querySelectorAll('.footer-contacts p');
-      
-      if (footerLogo) {
-        footerLogo.classList.add('slide-in-left');
-        footerLogo.style.transitionDelay = '0.1s';
-      }
-      
-      if (footerCopyright) {
-        footerCopyright.classList.add('slide-in-left');
-        footerCopyright.style.transitionDelay = '0.2s';
-      }
-      
-      footerContacts.forEach((contact, index) => {
-        contact.classList.add('slide-in-right');
-        contact.style.transitionDelay = `${0.1 + index * 0.1}s`;
-      });
-    }
+    // Удалена анимация для футера
   }
 
   // Инициализируем анимации
