@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://n10.kz/sitemap.xml 
