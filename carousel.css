@@ -245,7 +245,7 @@
 .hero-waves {
   display: block;
   width: 100%;
-  height: 60px;
+  height: 45px;
   position: absolute;
   bottom: -1px;
   z-index: 5;
@@ -385,12 +385,12 @@
 /* Медиа-запросы для мобильных устройств */
 @media (max-width: 480px) {
   .carousel {
-    height: 50vh;
+    height: 60vh;
     margin-bottom: 40px;
   }
 
   .carousel-item {
-    padding-top: 140px;
+    padding-top: 160px;
     overflow-y: auto; /* Добавляем вертикальный скролл */
     -webkit-overflow-scrolling: touch; /* Для плавного скролла на iOS */
   }
@@ -427,7 +427,21 @@
   }
 
   .hero-waves {
-    height: 30px;
+    height: 25px;
     bottom: -1px;
+  }
+
+  .item_second,
+  .item_third,
+  .item_fourth {
+    background-position: 70% center;
+  }
+
+  .item_first,
+  .item_five,
+  .item_six,
+  .item_seven,
+  .item_eight {
+    background-position: 40% center;
   }
 }

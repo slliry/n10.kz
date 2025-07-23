@@ -114,6 +114,12 @@
     padding-top: 4px;
   }
 
+  /* Стили для заголовка секции товаров */
+  #goods {
+    margin-left: 70px;
+    margin-top: 30px;
+  }
+
   /* Анимации для элементов при прокрутке */
   .fade-in {
     opacity: 0;
@@ -257,6 +263,10 @@
       font-size: 22px;
     }
 
+    #goods {
+      margin-left: 20px;
+    }
+
     .footer-container {
       flex-direction: column;
       gap: 15px;
@@ -277,9 +287,13 @@
     .section-title {
       padding-bottom: 20px;
     }
-    
+
     .section-title p {
       font-size: 20px;
+    }
+
+    #goods {
+      margin-left: 15px;
     }
 
     .footer {
