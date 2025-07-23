@@ -428,6 +428,6 @@
 
   .hero-waves {
     height: 30px;
-    bottom: -30px;
+    bottom: -1px;
   }
 }
