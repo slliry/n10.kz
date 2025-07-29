@@ -1,9 +1,20 @@
 document.addEventListener("scroll", () => {
   const header = document.querySelector(".header");
+  const carousel = document.querySelector(".carousel");
+  const carouselBottom = carousel ? carousel.getBoundingClientRect().bottom : 0;
+  
+  // Добавляем класс scrolled при небольшой прокрутке
   if (window.scrollY > 350) {
     header.classList.add("scrolled");
   } else {
     header.classList.remove("scrolled");
+  }
+  
+  // Добавляем класс after-carousel, когда карусель уже не видна
+  if (carouselBottom < 0) {
+    header.classList.add("after-carousel");
+  } else {
+    header.classList.remove("after-carousel");
   }
 });
 
