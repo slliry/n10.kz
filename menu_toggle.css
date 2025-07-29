@@ -194,6 +194,15 @@
   margin-bottom: 40px;
   opacity: 0;
   transform: translateY(-20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu-logo img {
+  height: 120px;
+  width: auto;
+  max-width: 350px;
 }
 
 .mobile-menu.visible .mobile-menu-logo {
@@ -221,5 +230,10 @@
   .mobile-menu-logo {
     font-size: 28px;
     margin-bottom: 30px;
+  }
+  
+  .mobile-menu-logo img {
+    height: 100px;
+    max-width: 280px;
   }
 }
